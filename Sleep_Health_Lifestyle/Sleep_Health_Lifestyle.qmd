@@ -117,8 +117,8 @@ qual_quant <- sleep_health |>
 qual_quant
 ```
 
-Does sleep quality or quantity change for different occupation? 
-There is one subject in manager occupation. Remove it from the visualization. 
+Does sleep quality or quantity change for different occupations? 
+There is one subject in the manager occupation. Remove it from the visualization. 
 
 ```{r}
 occ_1 <- sleep_health |>
@@ -145,8 +145,6 @@ occ_2 <- sleep_health |>
   theme_classic()
 occ_2
 ```
-
-Show the link between age and sleep duration with a scatterplot. Consider including information on the sleep disorder.
 
 
 ```{r}
@@ -208,7 +206,7 @@ sleep_recipe <- recipe(sleep_disorder ~ ., data = sleep_health_train) |>
 
 
 ```{r}
-# Apply recipe to the training data
+# Apply the recipe to the training data
 sleep_juiced <- juice(sleep_recipe)
 
 # Visualize the processed data
